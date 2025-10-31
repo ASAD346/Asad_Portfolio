@@ -283,8 +283,14 @@ if (contactForm) {
                 recaptchaResponse: recaptchaResponse
             };
 
+            // Determine API endpoint (Netlify Function in production, local API in development)
+            const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+            const apiEndpoint = isProduction 
+                ? '/.netlify/functions/contact' 
+                : 'http://localhost:5106/api/contact';
+            
             // Send to API
-            const response = await fetch('http://localhost:5106/api/contact', {
+            const response = await fetch(apiEndpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
