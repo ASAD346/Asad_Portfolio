@@ -7,15 +7,14 @@
   # Node version for Netlify Functions
   NODE_VERSION = "18"
 
-# Redirect rules for SPA routing
-# Redirect root to index page
+# Redirect rules - Netlify serves existing files automatically
+# Only redirect root and non-existent paths
 [[redirects]]
   from = "/"
   to = "/Pages/index.html"
   status = 200
 
-# SPA fallback - redirect unknown paths to index.html
-# Note: Netlify will automatically serve existing files, so this only applies to non-existent paths
+# Catch-all for non-existent paths
 [[redirects]]
   from = "/*"
   to = "/Pages/index.html"
