@@ -1,8 +1,7 @@
 [build]
   # Directory containing your static site files
   publish = "Portfolio"
-  # Command to run during build (optional, if you need to build anything)
-  command = ""
+  # No build command needed for static site
 
 [build.environment]
   # Node version for Netlify Functions
