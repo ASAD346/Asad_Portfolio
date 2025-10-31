@@ -15,7 +15,7 @@
   status = 200
 
 # SPA fallback - redirect unknown paths to index.html
-# Netlify automatically serves existing files, so this only applies to non-existent paths
+# Note: Netlify will automatically serve existing files, so this only applies to non-existent paths
 [[redirects]]
   from = "/*"
   to = "/Pages/index.html"

@@ -1,7 +1,10 @@
 # Netlify redirects file
+# This file should be in the publish directory root (Portfolio/Portfolio/Portfolio/)
+
 # Redirect root to index page
 /  /Pages/index.html  200
 
-# SPA fallback - redirect unknown paths to index.html (only if file doesn't exist)
+# SPA fallback - redirect unknown paths to index.html
+# Note: Netlify automatically serves existing files (Pages/*, Style/*, JavaScript/*, etc.)
+# This redirect only applies when the requested path doesn't exist
 /*  /Pages/index.html  200
-
