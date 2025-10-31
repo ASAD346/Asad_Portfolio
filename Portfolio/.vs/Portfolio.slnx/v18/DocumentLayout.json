@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Github_Repo\\Portfolio\\Portfolio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PortfolioAPI\\PortfolioAPI\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|E:\\Github_Repo\\Portfolio\\Portfolio\\portfolio\\pages\\contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|solutionrelative:portfolio\\pages\\contact.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|E:\\Github_Repo\\Portfolio\\Portfolio\\portfolio\\pages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|solutionrelative:portfolio\\pages\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|E:\\Github_Repo\\Portfolio\\Portfolio\\portfolio\\pages\\what-i-do.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|solutionrelative:portfolio\\pages\\what-i-do.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|E:\\Github_Repo\\Portfolio\\Portfolio\\portfolio\\pages\\projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|solutionrelative:portfolio\\pages\\projects.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|E:\\Github_Repo\\Portfolio\\Portfolio\\portfolio\\javascript\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|solutionrelative:portfolio\\javascript\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|E:\\Github_Repo\\Portfolio\\Portfolio\\portfolio\\style\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|solutionrelative:portfolio\\style\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|E:\\Github_Repo\\Portfolio\\Portfolio\\portfolio\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{88E27D8D-F43E-F2CE-987F-3FF07D35E5C0}|E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\Portfolio|solutionrelative:portfolio\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "PortfolioAPI\\PortfolioAPI\\appsettings.json",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\appsettings.json",
+              "RelativeToolTip": "PortfolioAPI\\PortfolioAPI\\appsettings.json",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-25T17:40:43.585Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "script.js",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\JavaScript\\script.js",
+              "RelativeDocumentMoniker": "Portfolio\\JavaScript\\script.js",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\JavaScript\\script.js",
+              "RelativeToolTip": "Portfolio\\JavaScript\\script.js",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAMcAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-23T19:03:29.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "what-i-do.html",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\what-i-do.html",
+              "RelativeDocumentMoniker": "Portfolio\\Pages\\what-i-do.html",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\what-i-do.html",
+              "RelativeToolTip": "Portfolio\\Pages\\what-i-do.html",
+              "ViewState": "AgIAAEUBAAAAAAAAAAAAAEcBAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-23T19:01:21.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "projects.html",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\projects.html",
+              "RelativeDocumentMoniker": "Portfolio\\Pages\\projects.html",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\projects.html",
+              "RelativeToolTip": "Portfolio\\Pages\\projects.html",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEYBAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-23T18:59:10.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "contact.html",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\contact.html",
+              "RelativeDocumentMoniker": "Portfolio\\Pages\\contact.html",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\contact.html",
+              "RelativeToolTip": "Portfolio\\Pages\\contact.html",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAAALAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-23T18:59:02.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Web.config",
+              "RelativeDocumentMoniker": "Portfolio\\Web.config",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Web.config",
+              "RelativeToolTip": "Portfolio\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-10-23T18:40:10.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "styles.css",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Style\\styles.css",
+              "RelativeDocumentMoniker": "Portfolio\\Style\\styles.css",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Style\\styles.css",
+              "RelativeToolTip": "Portfolio\\Style\\styles.css",
+              "ViewState": "AgIAAMIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-23T18:37:40.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "index.html",
+              "DocumentMoniker": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\index.html",
+              "RelativeDocumentMoniker": "Portfolio\\Pages\\index.html",
+              "ToolTip": "E:\\Github_Repo\\Portfolio\\Portfolio\\Portfolio\\Pages\\index.html",
+              "RelativeToolTip": "Portfolio\\Pages\\index.html",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-10-23T18:37:26.053Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

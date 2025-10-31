@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.NET Developer Portfolio</title>
+    <link rel="stylesheet" href="../Style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">.NET</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="what-i-do.html">What I Do</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">ASAD KHAN</span>
+                    <span class="role">.NET Developer</span>
+                </h1>
+                <p class="hero-description">
+                    Building robust, scalable applications with C#, ASP.NET Core, and modern web technologies
+                </p>
+                <div class="hero-buttons">
+                    <a href="../AsadKhan_CV.pdf" id="downloadCvBtn" class="btn btn-primary">Download CV</a>
+                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <pre class="code-content"><code><span class="keyword">public class</span> <span class="class-name">Developer</span>
+{
+                    <span class="keyword">public string</span> Name { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+                    <span class="keyword">public string</span> Title { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+    
+                    <span class="keyword">public void</span> <span class="method">BuildAmazingThings</span>()
+    {
+                    <span class="comment">// Code with passion</span>
+        Console.WriteLine(<span class="string">"Creating solutions..."</span>);
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Skills Overview -->
+    <section class="skills-overview">
+        <div class="container">
+            <h2 class="section-title">Tech Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-flip" data-aos="fade-up">
+                    <div class="tech-inner">
+                        <div class="tech-face tech-front">
+                            <i class="fas fa-code"></i>
+                            <h3>C# & .NET</h3>
+                        </div>
+                        <div class="tech-face tech-back">
+                            <h4>C# & .NET</h4>
+                            <p>Web API, MVC, EF Core, LINQ, async, testing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-flip" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-inner">
+                        <div class="tech-face tech-front">
+                            <i class="fas fa-database"></i>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="tech-face tech-back">
+                            <h4>Databases</h4>
+                            <p>Design, indexing, queries, migrations, tuning</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-flip" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-inner">
+                        <div class="tech-face tech-front">
+                            <i class="fas fa-cloud"></i>
+                            <h3>Cloud & DevOps</h3>
+                        </div>
+                        <div class="tech-face tech-back">
+                            <h4>Cloud & DevOps</h4>
+                            <p>App Service, Containers, Pipelines, Monitoring</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-flip" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-inner">
+                        <div class="tech-face tech-front">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="tech-face tech-back">
+                            <h4>Frontend</h4>
+                            <p>Blazor UI, responsive layouts, SPA basics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p>
+                        I'm a passionate .NET developer with expertise in building enterprise-level applications.
+                        I specialize in creating scalable backend systems, RESTful APIs, and modern web applications
+                        using the latest .NET technologies.
+                    </p>
+                    <p>
+                        With a strong foundation in C#, ASP.NET Core, and cloud technologies, I deliver high-quality
+                        solutions that meet business objectives while maintaining clean, maintainable code.
+                    </p>
+                    <a href="what-i-do.html" class="btn btn-primary">Learn More About What I Do</a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="20">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+
+            <div class="education-timeline">
+                <div class="edu-item" data-aos="fade-up">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <h3>Bachelor of Science in Computer Science</h3>
+                            <span class="edu-meta">2019 – 2023 • XYZ University</span>
+                        </div>
+                        <p>Focused on software engineering, data structures, algorithms, and web development with .NET.</p>
+                        <div class="course-tags">
+                            <span class="course-tag">Data Structures</span>
+                            <span class="course-tag">Algorithms</span>
+                            <span class="course-tag">ASP.NET Core</span>
+                            <span class="course-tag">Databases</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="edu-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <h3>Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+                            <span class="edu-meta">2024</span>
+                        </div>
+                        <p>Cloud concepts, Azure services, security, privacy, compliance, pricing, and support.</p>
+                        <div class="course-tags">
+                            <span class="course-tag">Azure</span>
+                            <span class="course-tag">Cloud</span>
+                            <span class="course-tag">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="edu-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <h3>Specialization: Modern Web Development with .NET</h3>
+                            <span class="edu-meta">Courses & Bootcamps</span>
+                        </div>
+                        <p>Hands-on projects covering RESTful APIs, Entity Framework, authentication, and deployment.</p>
+                        <div class="course-tags">
+                            <span class="course-tag">Entity Framework</span>
+                            <span class="course-tag">Web API</span>
+                            <span class="course-tag">Authentication</span>
+                            <span class="course-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="#contact" class="btn btn-secondary">Want my detailed transcript? Contact me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Projects Preview -->
+    <section class="recent-projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-image">
+                        <img src="../Images/EMP.PNG" alt="Project 1">
+
+                        <!--<img src="https://via.placeholder.com/400x250/512BD4/FFFFFF?text=Project+1" alt="Project 1">-->
+                        <div class="project-overlay">
+                            <a href="projects.html" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Employee Management</h3>
+                        <p>A Full-stack management solution built with ASP.Net and MySql</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML, CSS</span>
+                            <span class="tag">ASP.NET</span>
+                            <span class="tag">MYSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/512BD4/FFFFFF?text=Project+2" alt="Project 2">
+                        <div class="project-overlay">
+                            <a href="projects.html" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>RESTful API Service</h3>
+                        <p>Microservices architecture with authentication and real-time features</p>
+                        <div class="project-tags">
+                            <span class="tag">Web API</span>
+                            <span class="tag">Azure</span>
+                            <span class="tag">SignalR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250/512BD4/FFFFFF?text=Project+3" alt="Project 3">
+                        <div class="project-overlay">
+                            <a href="projects.html" class="btn btn-small">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Enterprise CRM System</h3>
+                        <p>Customer relationship management system with analytics dashboard</p>
+                        <div class="project-tags">
+                            <span class="tag">Blazor</span>
+                            <span class="tag">Entity Framework</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Professional .NET developer creating innovative solutions with cutting-edge technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="what-i-do.html">What I Do</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Stack Overflow"><i class="fab fa-stack-overflow"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 .NET Developer Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
