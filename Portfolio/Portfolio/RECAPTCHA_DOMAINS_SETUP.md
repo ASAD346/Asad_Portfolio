@@ -114,3 +114,4 @@ To verify it's working:
 - **Local Development:** `localhost`, `127.0.0.1`
 - **Custom Domain:** (if you have one set up in Netlify)
 
+
