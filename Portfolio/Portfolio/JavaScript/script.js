@@ -29,9 +29,9 @@ window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     if (scrollTop > 100) {
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+        if (navbar) navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
     } else {
-        navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        if (navbar) navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
     }
     
     lastScrollTop = scrollTop;
@@ -73,27 +73,45 @@ const animateCounter = (element) => {
     requestAnimationFrame(updateCounter);
 };
 
-const statNumbers = document.querySelectorAll('.stat-number');
-if (statNumbers.length > 0) {
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // Check if already animated (has data-animated attribute)
-            if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
-                // Get text content and trim whitespace
-                const currentValue = parseInt(entry.target.textContent.trim()) || 0;
-                if (currentValue === 0) {
-                    // Mark as animated to prevent re-animation
-                    entry.target.setAttribute('data-animated', 'true');
-                    animateCounter(entry.target);
+// Initialize counter animation
+const initCounterAnimation = () => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    if (statNumbers.length > 0) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // Check if already animated (has data-animated attribute)
+                if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
+                    // Get text content and trim whitespace
+                    const currentValue = parseInt(entry.target.textContent.trim()) || 0;
+                    if (currentValue === 0) {
+                        // Mark as animated to prevent re-animation
+                        entry.target.setAttribute('data-animated', 'true');
+                        animateCounter(entry.target);
+                    }
                 }
-            }
-        });
-    }, observerOptions);
+            });
+        }, observerOptions);
 
-    statNumbers.forEach(stat => {
-        statsObserver.observe(stat);
-    });
-}
+        statNumbers.forEach(stat => {
+            statsObserver.observe(stat);
+        });
+    }
+};
+
+// Initialize counters when DOM is ready
+(function() {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCounterAnimation);
+    } else {
+        initCounterAnimation();
+    }
+    
+    // Fallback: try again after page fully loads
+    window.addEventListener('load', initCounterAnimation);
+    
+    // Additional fallback with delay
+    setTimeout(initCounterAnimation, 200);
+})();
 
 // ===========================
 // Smooth Scroll for Anchor Links
@@ -137,7 +155,7 @@ if (filterButtons.length > 0) {
                         card.style.transform = 'scale(1)';
                     }, 10);
                 } else {
-                    if (categories.includes(filterValue)) {
+                    if (categories && categories.includes(filterValue)) {
                         card.style.display = 'grid';
                         setTimeout(() => {
                             card.style.opacity = '1';
@@ -164,19 +182,21 @@ const faqItems = document.querySelectorAll('.faq-item');
 faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
     
-    question.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        
-        // Close all FAQ items
-        faqItems.forEach(faq => {
-            faq.classList.remove('active');
+    if (question) {
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all FAQ items
+            faqItems.forEach(faq => {
+                faq.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+            }
         });
-        
-        // Open clicked item if it wasn't active
-        if (!isActive) {
-            item.classList.add('active');
-        }
-    });
+    }
 });
 
 // ===========================
@@ -209,6 +229,7 @@ const generateCaptcha = () => {
     const captchaQuestion = document.getElementById('captchaQuestion');
     if (captchaQuestion) {
         captchaQuestion.textContent = question;
+        captchaQuestion.style.display = 'inline';
     }
 };
 
@@ -235,18 +256,24 @@ const initCaptcha = () => {
     }
 };
 
-// Run when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCaptcha);
-} else {
-    initCaptcha();
-}
+// Run when DOM is ready - with multiple checks
+(function() {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCaptcha);
+    } else {
+        // DOM already loaded
+        initCaptcha();
+    }
+    
+    // Fallback: try again after page fully loads
+    window.addEventListener('load', initCaptcha);
+    
+    // Additional fallback with delay
+    setTimeout(initCaptcha, 200);
+})();
 
 // ===========================
 // Contact Form Handling
-// ===========================
-// ===========================
-// Contact Form Handling (with EmailJS)
 // ===========================
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
@@ -258,17 +285,21 @@ if (contactForm) {
         // Validate Math CAPTCHA first
         const captchaInput = document.getElementById('captcha');
         if (captchaInput && !validateCaptcha(captchaInput.value)) {
-            formMessage.textContent = 'Incorrect security answer. Please try again.';
-            formMessage.className = 'form-message error';
-            formMessage.style.display = 'block';
+            if (formMessage) {
+                formMessage.textContent = 'Incorrect security answer. Please try again.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+            }
             
             // Regenerate captcha on failure
             generateCaptcha();
-            captchaInput.value = '';
+            if (captchaInput) captchaInput.value = '';
             
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+            if (formMessage) {
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
             return;
         }
 
@@ -286,37 +317,39 @@ if (contactForm) {
                 throw new Error('Failed to get reCAPTCHA token');
             }
         } catch (error) {
-            formMessage.textContent = 'reCAPTCHA verification failed. Please refresh the page and try again.';
-            formMessage.className = 'form-message error';
-            formMessage.style.display = 'block';
-            
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+            if (formMessage) {
+                formMessage.textContent = 'reCAPTCHA verification failed. Please refresh the page and try again.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+                
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
             return;
         }
 
         // Show loading state
         const submitButton = contactForm.querySelector('.btn-submit');
-        const btnText = submitButton.querySelector('.btn-text');
-        const btnLoader = submitButton.querySelector('.btn-loader');
+        const btnText = submitButton ? submitButton.querySelector('.btn-text') : null;
+        const btnLoader = submitButton ? submitButton.querySelector('.btn-loader') : null;
 
-        btnText.style.display = 'none';
-        btnLoader.style.display = 'inline-block';
-        submitButton.disabled = true;
+        if (btnText) btnText.style.display = 'none';
+        if (btnLoader) btnLoader.style.display = 'inline-block';
+        if (submitButton) submitButton.disabled = true;
 
-        // Send form to ASP.NET API
+        // Send form to API
         try {
             // Prepare form data
             const formData = {
-                name: contactForm.querySelector('#name').value,
-                email: contactForm.querySelector('#email').value,
-                phone: contactForm.querySelector('#phone').value,
-                subject: contactForm.querySelector('#subject').value,
-                projectType: contactForm.querySelector('#project-type').value,
-                budget: contactForm.querySelector('#budget').value,
-                message: contactForm.querySelector('#message').value,
-                captcha: captchaInput.value,
+                name: contactForm.querySelector('#name')?.value || '',
+                email: contactForm.querySelector('#email')?.value || '',
+                phone: contactForm.querySelector('#phone')?.value || '',
+                subject: contactForm.querySelector('#subject')?.value || '',
+                projectType: contactForm.querySelector('#project-type')?.value || '',
+                budget: contactForm.querySelector('#budget')?.value || '',
+                message: contactForm.querySelector('#message')?.value || '',
+                captcha: captchaInput?.value || '',
                 recaptchaResponse: recaptchaResponse
             };
 
@@ -339,9 +372,11 @@ if (contactForm) {
 
             if (response.ok) {
                 // Show success message
-                formMessage.textContent = result.message || 'Thank you for your message! I will get back to you soon.';
-                formMessage.className = 'form-message success';
-                formMessage.style.display = 'block';
+                if (formMessage) {
+                    formMessage.textContent = result.message || 'Thank you for your message! I will get back to you soon.';
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                }
 
                 // Reset form
                 contactForm.reset();
@@ -351,84 +386,32 @@ if (contactForm) {
                 
                 // Note: reCAPTCHA v3 doesn't need reset (it's token-based)
 
-                setTimeout(() => {
-                    formMessage.style.display = 'none';
-                }, 5000);
+                if (formMessage) {
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 5000);
+                }
             } else {
                 throw new Error(result.error || 'Submission failed');
             }
 
         } catch (error) {
-            formMessage.textContent = error.message || 'Oops! Something went wrong. Please try again.';
-            formMessage.className = 'form-message error';
-            formMessage.style.display = 'block';
+            if (formMessage) {
+                formMessage.textContent = error.message || 'Oops! Something went wrong. Please try again.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
 
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 5000);
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                }, 5000);
+            }
         } finally {
-            btnText.style.display = 'inline';
-            btnLoader.style.display = 'none';
-            submitButton.disabled = false;
+            if (btnText) btnText.style.display = 'inline';
+            if (btnLoader) btnLoader.style.display = 'none';
+            if (submitButton) submitButton.disabled = false;
         }
     });
 }
-
-//const contactForm = document.getElementById('contactForm');
-//const formMessage = document.getElementById('formMessage');
-
-//if (contactForm) {
-//    contactForm.addEventListener('submit', async (e) => {
-//        e.preventDefault();
-
-//        // Get form data
-//        const formData = new FormData(contactForm);
-//        const data = Object.fromEntries(formData);
-
-//        // Show loading state
-//        const submitButton = contactForm.querySelector('.btn-submit');
-//        const btnText = submitButton.querySelector('.btn-text');
-//        const btnLoader = submitButton.querySelector('.btn-loader');
-        
-//        btnText.style.display = 'none';
-//        btnLoader.style.display = 'inline-block';
-//        submitButton.disabled = true;
-
-//        // Simulate form submission (replace with actual API call)
-//        try {
-//            // Simulate API delay
-//            await new Promise(resolve => setTimeout(resolve, 1500));
-
-//            // Show success message
-//            formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-//            formMessage.className = 'form-message success';
-//            formMessage.style.display = 'block';
-
-//            // Reset form
-//            contactForm.reset();
-
-//            // Hide message after 5 seconds
-//            setTimeout(() => {
-//                formMessage.style.display = 'none';
-//            }, 5000);
-
-//        } catch (error) {
-//            // Show error message
-//            formMessage.textContent = 'Oops! Something went wrong. Please try again.';
-//            formMessage.className = 'form-message error';
-//            formMessage.style.display = 'block';
-
-//            setTimeout(() => {
-//                formMessage.style.display = 'none';
-//            }, 5000);
-//        } finally {
-//            // Reset button state
-//            btnText.style.display = 'inline';
-//            btnLoader.style.display = 'none';
-//            submitButton.disabled = false;
-//        }
-//    });
-//}
 
 // ===========================
 // Animate on Scroll (AOS)
@@ -471,74 +454,7 @@ if (document.readyState === 'loading') {
 }
 
 // ===========================
-// Typing Effect for Hero Section (Optional Enhancement)
-// ===========================
-const createTypingEffect = (element, texts, speed = 100, deleteSpeed = 50, delay = 2000) => {
-    if (!element) return;
-    
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    
-    const type = () => {
-        const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            element.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            element.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        
-        let typeSpeed = isDeleting ? deleteSpeed : speed;
-        
-        if (!isDeleting && charIndex === currentText.length) {
-            typeSpeed = delay;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-        }
-        
-        setTimeout(type, typeSpeed);
-    };
-    
-    // Uncomment the line below to enable typing effect on hero name
-    // type();
-};
-
-// Example usage (uncomment to enable):
-// const nameElement = document.querySelector('.name');
-// if (nameElement) {
-//     createTypingEffect(nameElement, ['Your Name', 'Software Developer', '.NET Expert'], 150, 100, 2000);
-// }
-
-// ===========================
-// Progress Bar Animation
-// ===========================
-const progressBars = document.querySelectorAll('.progress');
-if (progressBars.length > 0) {
-    const progressObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const width = entry.target.style.width;
-                entry.target.style.width = '0%';
-                setTimeout(() => {
-                    entry.target.style.width = width;
-                }, 100);
-                progressObserver.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    progressBars.forEach(bar => {
-        progressObserver.observe(bar);
-    });
-}
-
-// ===========================
-// Scroll to Top Button (Optional)
+// Scroll to Top Button
 // ===========================
 const createScrollToTopButton = () => {
     const button = document.createElement('button');
@@ -595,19 +511,6 @@ if (heroBackground) {
         heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
     });
 }
-
-// ===========================
-// Console Welcome Message
-// ===========================
-console.log('%c👋 Welcome to my Portfolio!', 'color: #512BD4; font-size: 20px; font-weight: bold;');
-console.log('%c💻 Built with HTML, CSS, and JavaScript', 'color: #68217A; font-size: 14px;');
-console.log('%c🚀 Interested in working together? Visit the contact page!', 'color: #00D4FF; font-size: 14px;');
-
-// ===========================
-// Prevent Context Menu on Production (Optional)
-// ===========================
-// Uncomment to disable right-click on production
-// document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 // ===========================
 // Force Download for CV Button
@@ -667,7 +570,9 @@ document.addEventListener('keydown', (e) => {
 if ('loading' in HTMLImageElement.prototype) {
     const images = document.querySelectorAll('img[loading="lazy"]');
     images.forEach(img => {
-        img.src = img.dataset.src;
+        if (img.dataset.src) {
+            img.src = img.dataset.src;
+        }
     });
 } else {
     // Fallback for browsers that don't support lazy loading
@@ -688,27 +593,8 @@ window.addEventListener('afterprint', () => {
 });
 
 // ===========================
-// Force Download for CV Button
+// Console Welcome Message
 // ===========================
-const downloadCvBtn = document.getElementById('downloadCvBtn');
-if (downloadCvBtn) {
-    downloadCvBtn.addEventListener('click', async (e) => {
-        e.preventDefault();
-        try {
-            const response = await fetch('../AsadKhan_CV.pdf');
-            if (!response.ok) throw new Error('File not found');
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'AsadKhan_CV.pdf';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            window.URL.revokeObjectURL(url);
-        } catch (err) {
-            // Fallback: navigate to file if fetch blocked
-            window.location.href = '../AsadKhan_CV.pdf';
-        }
-    });
-}
+console.log('%c👋 Welcome to my Portfolio!', 'color: #512BD4; font-size: 20px; font-weight: bold;');
+console.log('%c💻 Built with HTML, CSS, and JavaScript', 'color: #68217A; font-size: 14px;');
+console.log('%c🚀 Interested in working together? Visit the contact page!', 'color: #00D4FF; font-size: 14px;');
