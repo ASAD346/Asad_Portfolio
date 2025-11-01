@@ -41,35 +41,51 @@ window.addEventListener('scroll', () => {
 // Animated Counter for Stats
 // ===========================
 const observerOptions = {
-    threshold: 0.5,
+    threshold: 0.1, // Trigger when 10% visible (lower threshold)
     rootMargin: '0px'
 };
 
 const animateCounter = (element) => {
-    const target = parseInt(element.getAttribute('data-target'));
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
+    const target = parseInt(element.getAttribute('data-target')) || 0;
+    if (target === 0) return;
+    
+    const duration = 2000; // 2 seconds
+    const startTime = performance.now();
+    const startValue = 0;
 
-    const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-            element.textContent = Math.floor(current);
+    const updateCounter = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function for smooth animation
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(startValue + (target - startValue) * easeOut);
+        
+        element.textContent = current;
+        
+        if (progress < 1) {
             requestAnimationFrame(updateCounter);
         } else {
             element.textContent = target;
         }
     };
 
-    updateCounter();
+    requestAnimationFrame(updateCounter);
 };
 
 const statNumbers = document.querySelectorAll('.stat-number');
 if (statNumbers.length > 0) {
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && entry.target.textContent === '0') {
-                animateCounter(entry.target);
+            // Check if already animated (has data-animated attribute)
+            if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
+                // Get text content and trim whitespace
+                const currentValue = parseInt(entry.target.textContent.trim()) || 0;
+                if (currentValue === 0) {
+                    // Mark as animated to prevent re-animation
+                    entry.target.setAttribute('data-animated', 'true');
+                    animateCounter(entry.target);
+                }
             }
         });
     }, observerOptions);
@@ -201,19 +217,29 @@ const validateCaptcha = (userAnswer) => {
 };
 
 // Initialize captcha when page loads
-if (document.getElementById('captchaQuestion')) {
-    generateCaptcha();
-    
-    const refreshButton = document.getElementById('refreshCaptcha');
-    if (refreshButton) {
-        refreshButton.addEventListener('click', () => {
-            generateCaptcha();
-            const captchaInput = document.getElementById('captcha');
-            if (captchaInput) {
-                captchaInput.value = '';
-            }
-        });
+const initCaptcha = () => {
+    const captchaQuestion = document.getElementById('captchaQuestion');
+    if (captchaQuestion) {
+        generateCaptcha();
+        
+        const refreshButton = document.getElementById('refreshCaptcha');
+        if (refreshButton) {
+            refreshButton.addEventListener('click', () => {
+                generateCaptcha();
+                const captchaInput = document.getElementById('captcha');
+                if (captchaInput) {
+                    captchaInput.value = '';
+                }
+            });
+        }
     }
+};
+
+// Run when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCaptcha);
+} else {
+    initCaptcha();
 }
 
 // ===========================
@@ -246,10 +272,21 @@ if (contactForm) {
             return;
         }
 
-        // Validate reCAPTCHA
-        const recaptchaResponse = grecaptcha.getResponse();
-        if (!recaptchaResponse) {
-            formMessage.textContent = 'Please complete the reCAPTCHA verification.';
+        // Get reCAPTCHA v3 token
+        let recaptchaResponse = '';
+        try {
+            // Wait for reCAPTCHA to be ready
+            if (typeof grecaptcha === 'undefined') {
+                throw new Error('reCAPTCHA not loaded');
+            }
+            
+            // Execute reCAPTCHA v3
+            recaptchaResponse = await grecaptcha.execute('6LdYr_4rAAAAAEMcW6BwGJK7kh67JgASYBEhVjBK', { action: 'submit' });
+            if (!recaptchaResponse) {
+                throw new Error('Failed to get reCAPTCHA token');
+            }
+        } catch (error) {
+            formMessage.textContent = 'reCAPTCHA verification failed. Please refresh the page and try again.';
             formMessage.className = 'form-message error';
             formMessage.style.display = 'block';
             
@@ -312,10 +349,7 @@ if (contactForm) {
                 // Regenerate captcha after successful submission
                 generateCaptcha();
                 
-                // Reset reCAPTCHA
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
-                }
+                // Note: reCAPTCHA v3 doesn't need reset (it's token-based)
 
                 setTimeout(() => {
                     formMessage.style.display = 'none';
