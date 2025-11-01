@@ -515,29 +515,32 @@ if (heroBackground) {
 // ===========================
 // Force Download for CV Button
 // ===========================
-const downloadCvBtn = document.getElementById('downloadCvBtn');
-if (downloadCvBtn) {
-    downloadCvBtn.addEventListener('click', async (e) => {
-        e.preventDefault();
-        const filePath = downloadCvBtn.getAttribute('href') || '../AsadKhan_CV.pdf';
-        try {
-            const response = await fetch(filePath, { cache: 'no-cache' });
-            if (!response.ok) throw new Error('File not found');
-            const blob = await response.blob();
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'AsadKhan_CV.pdf';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            window.URL.revokeObjectURL(url);
-        } catch (err) {
-            // Fallback: navigate to file if fetch fails
-            window.location.href = filePath;
-        }
-    });
-}
+(function() {
+    const downloadCvBtn = document.getElementById('downloadCvBtn');
+    if (downloadCvBtn && !downloadCvBtn.hasAttribute('data-cv-listener')) {
+        downloadCvBtn.setAttribute('data-cv-listener', 'true');
+        downloadCvBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const filePath = downloadCvBtn.getAttribute('href') || '../AsadKhan_CV.pdf';
+            try {
+                const response = await fetch(filePath, { cache: 'no-cache' });
+                if (!response.ok) throw new Error('File not found');
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'AsadKhan_CV.pdf';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(url);
+            } catch (err) {
+                // Fallback: navigate to file if fetch fails
+                window.location.href = filePath;
+            }
+        });
+    }
+})();
 
 // ===========================
 // Keyboard Navigation Enhancement
