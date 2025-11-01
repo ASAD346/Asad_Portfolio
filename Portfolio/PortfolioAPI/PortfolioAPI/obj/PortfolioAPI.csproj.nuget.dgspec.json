@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj": {}
+    "E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj": {}
   },
   "projects": {
-    "E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj": {
+    "E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj",
+        "projectUniqueName": "E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj",
         "projectName": "PortfolioAPI",
-        "projectPath": "E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj",
+        "projectPath": "E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\PortfolioAPI.csproj",
         "packagesPath": "C:\\Users\\HAFIZ-TECH\\.nuget\\packages\\",
-        "outputPath": "E:\\VISUAL BASIC C#\\UNIVERSITY\\Portfolio\\PortfolioAPI\\PortfolioAPI\\obj\\",
+        "outputPath": "E:\\Github_Repo\\Portfolio\\Portfolio\\PortfolioAPI\\PortfolioAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

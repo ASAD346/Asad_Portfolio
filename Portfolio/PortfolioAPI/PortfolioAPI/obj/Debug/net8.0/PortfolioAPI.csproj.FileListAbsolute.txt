@@ -38,3 +38,44 @@ E:\VISUAL BASIC C#\UNIVERSITY\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8
 E:\VISUAL BASIC C#\UNIVERSITY\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.pdb
 E:\VISUAL BASIC C#\UNIVERSITY\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.genruntimeconfig.cache
 E:\VISUAL BASIC C#\UNIVERSITY\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\ref\PortfolioAPI.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\appsettings.Development.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\PortfolioAPI.staticwebassets.endpoints.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\appsettings.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\PortfolioAPI.exe
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\PortfolioAPI.deps.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\PortfolioAPI.runtimeconfig.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\PortfolioAPI.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\PortfolioAPI.pdb
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\MailKit.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\Microsoft.OpenApi.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\MimeKit.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.csproj.AssemblyReference.cache
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\rpswa.dswa.cache.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.AssemblyInfoInputs.cache
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.AssemblyInfo.cs
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.csproj.CoreCompileInputs.cache
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.MvcApplicationPartsAssemblyInfo.cs
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.MvcApplicationPartsAssemblyInfo.cache
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.sourcelink.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\rjimswa.dswa.cache.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\scopedcss\bundle\PortfolioAPI.styles.css
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\staticwebassets.build.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\staticwebassets.development.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\swae.build.ex.cache
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\Portfoli.E6EF8B96.Up2Date
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\refint\PortfolioAPI.dll
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.pdb
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\PortfolioAPI.genruntimeconfig.cache
+E:\Github_Repo\Portfolio\Portfolio\PortfolioAPI\PortfolioAPI\obj\Debug\net8.0\ref\PortfolioAPI.dll
