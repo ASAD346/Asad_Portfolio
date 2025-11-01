@@ -98,3 +98,5 @@ If redirects aren't working on Netlify, check:
 2. File is actually deployed (check "Published files")
 3. Clear browser cache and test in incognito mode
 
+
+

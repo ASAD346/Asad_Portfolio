@@ -91,3 +91,5 @@ After moving, Netlify will find everything correctly!
 
 **Bottom line:** Netlify is right, just move the functions folder to where it expects them!
 
+
+

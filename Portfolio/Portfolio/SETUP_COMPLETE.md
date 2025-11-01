@@ -71,3 +71,5 @@ These are no longer needed since everything is at the base directory level.
 
 **Your setup is now correct! Netlify auto-detection will work perfectly.** 🎉
 
+
+

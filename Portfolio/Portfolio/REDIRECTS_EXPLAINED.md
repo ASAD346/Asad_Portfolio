@@ -182,3 +182,5 @@ A: Add a rule before the catch-all: `/blocked-path /Pages/index.html 404`
 
 **Key Point:** Netlify is smart - it checks for existing files FIRST, then applies redirects. So your CSS, JS, images, and HTML pages all work normally!
 
+
+

@@ -25,6 +25,10 @@
   # Directory where Netlify Functions are located
   directory = "netlify/functions"
 
+# Plugin to automatically install function dependencies
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
 # Headers for security
 [[headers]]
   for = "/*"

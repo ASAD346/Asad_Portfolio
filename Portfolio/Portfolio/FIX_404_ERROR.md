@@ -77,3 +77,5 @@ If you want simpler URLs, you could move `index.html` to the root of the publish
 
 **The most common fix:** Make sure the `_redirects` file is in `Portfolio/Portfolio/Portfolio/_redirects` and redeploy.
 
+
+

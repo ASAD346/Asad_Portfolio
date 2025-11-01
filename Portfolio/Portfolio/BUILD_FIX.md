@@ -45,3 +45,5 @@ In Netlify dashboard, click on the failed deploy and check the build logs. Look 
 
 If npm install is the issue, you can temporarily remove the nodemailer dependency and use a simpler approach. But first, try setting the base directory correctly in Netlify dashboard - that fixes 90% of these errors.
 
+
+

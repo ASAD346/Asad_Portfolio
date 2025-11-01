@@ -70,3 +70,4 @@ For detailed instructions, see `NETLIFY_DEPLOYMENT.md`
 - Your local development will still work with the existing API setup
 - Production deployment uses the serverless function automatically
 
+

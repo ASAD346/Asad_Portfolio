@@ -206,3 +206,5 @@ they were stripped away during publishing!
 
 **Key Takeaway:** The publish directory (`Portfolio/Portfolio/Portfolio/`) becomes the website root (`/`). All paths in `_redirects` are relative to that root, not to your local folder structure.
 
+
+

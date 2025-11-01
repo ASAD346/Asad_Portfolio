@@ -106,3 +106,5 @@ But the current structure should work with proper redirects.
 2. Check deploy logs for errors
 3. Verify files appear in "Published files" section
 
+
+
