@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - .NET Developer</title>
+    <title>Projects | Asad Khan</title>
     <link rel="stylesheet" href="../Style/styles.css">
+    <meta name="description"
+        content="Showcase of projects by Muhammad Asad Khan, including MERN Stack, .NET Core, and Mobile Apps.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="logo">
                 <span class="logo-bracket">&lt;</span>
-                <span class="logo-text">.NET</span>
+                <span class="logo-text">Asad Khan</span>
                 <span class="logo-bracket">/&gt;</span>
             </div>
             <ul class="nav-links" id="nav-links">
@@ -44,10 +48,10 @@
         <div class="container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web-api">Web API</button>
-                <button class="filter-btn" data-filter="full-stack">Full Stack</button>
-                <button class="filter-btn" data-filter="microservices">Microservices</button>
-                <button class="filter-btn" data-filter="blazor">Blazor</button>
+                <button class="filter-btn" data-filter="mern">MERN Stack</button>
+                <button class="filter-btn" data-filter="net">.NET Core</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                <button class="filter-btn" data-filter="desktop">Desktop & AI</button>
             </div>
         </div>
     </section>
@@ -56,225 +60,213 @@
     <section class="projects-main">
         <div class="container">
             <div class="projects-grid-full">
-                <!-- Project 1 -->
-                <div class="project-card-full" data-category="full-stack" data-aos="fade-up">
+                <!-- Mini Social Media Platform -->
+                <div class="project-card-full" data-category="mern" data-aos="fade-up">
+                    <div class="project-image-full">
+                        <img src="../Images/SMP.PNG" alt="Mini Social Media Platform">
+                        <div class="project-overlay-full">
+                            <div class="project-links">
+                                <a href="https://socialmediaplatform08.netlify.app/" class="project-link"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Mini Social Media Platform</h3>
+                        <p>
+                            Developed using the MERN Stack featuring user profiles, post creation, comments, likes, and
+                            a follow/unfollow system.
+                            Implemented secure RESTful backend with JWT-based authentication.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Secure user authentication</li>
+                                <li><i class="fas fa-check-circle"></i> Dynamic post creation and interaction</li>
+                                <li><i class="fas fa-check-circle"></i> Component-based architecture</li>
+                                <li><i class="fas fa-check-circle"></i> Mobile-responsive UI</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Management System -->
+                <div class="project-card-full" data-category="mern" data-aos="fade-up">
+                    <div class="project-image-full">
+                        <img src="../Images/PMS.PNG" alt="Project Management System">
+                        <div class="project-overlay-full">
+                            <div class="project-links">
+                                <a href="https://proj-mgmt-sytm.netlify.app/" class="project-link"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>Project Management System</h3>
+                        <p>
+                            Trello/Asana-like system with responsive project boards and dynamic task cards.
+                            Features include task assignment, real-time updates, and team collaboration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MERN Stack</span>
+                            <span class="tech-tag">State Management</span>
+                            <span class="tech-tag">Drag-and-Drop</span>
+                            <span class="tech-tag">RESTful API</span>
+                        </div>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Interactive task management</li>
+                                <li><i class="fas fa-check-circle"></i> Dynamic project boards</li>
+                                <li><i class="fas fa-check-circle"></i> Team collaboration features</li>
+                                <li><i class="fas fa-check-circle"></i> Real-time status updates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- E-commerce Store -->
+                <div class="project-card-full" data-category="mern" data-aos="fade-up">
+                    <div class="project-image-full">
+                        <img src="../Images/ES.PNG" alt="E-commerce Store">
+                        <div class="project-overlay-full">
+                            <div class="project-links">
+                                <a href="https://e-commercee-store.netlify.app/" class="project-link"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3>E-commerce Store</h3>
+                        <p>
+                            Full-stack store featuring product listings, detailed product pages, shopping cart
+                            management,
+                            and secure payment workflow integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Order Processing</span>
+                        </div>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i> Seamless product navigation</li>
+                                <li><i class="fas fa-check-circle"></i> Shopping cart & Guest access</li>
+                                <li><i class="fas fa-check-circle"></i> Secure payment integration</li>
+                                <li><i class="fas fa-check-circle"></i> Responsive catalog</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Management System -->
+                <div class="project-card-full" data-category="mern" data-aos="fade-up">
                     <div class="project-image-full">
                         <img src="../Images/TMS.PNG" alt="Task Management System">
-                        <!-- <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=E-Commerce+Platform" alt="E-Commerce Platform"> -->
                         <div class="project-overlay-full">
                             <div class="project-links">
-                                <a href="https://taskmanagementsystembyasad.netlify.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="https://github.com/ASAD346/task-Management-system" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Task Management System</h3>
-                        <p>
-                            A comprehensive task management solution built with React Js and Node Js.
-                            Features include user authentication, task management, and a dashboard for task management.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React Js</span>
-                            <span class="tech-tag">Node Js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Express Js</span>
-                            <span class="tech-tag">JWT Auth</span>
-                            <!-- <span class="tech-tag"></span> -->
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> User authentication</li>
-                                <li><i class="fas fa-check-circle"></i> Task management</li>
-                                <li><i class="fas fa-check-circle"></i> Dashboard for task management</li>
-                                <li><i class="fas fa-check-circle"></i> Responsive design</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card-full" data-category="web-api microservices" data-aos="fade-up">
-                    <div class="project-image-full">
-                        <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=Microservices+API" alt="Microservices API">
-                        <div class="project-overlay-full">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Documentation</a>
+                                <a href="https://taskmanagementsystembyasad.netlify.app/" class="project-link"><i
+                                        class="fas fa-external-link-alt"></i> Live Demo</a>
                                 <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
                             </div>
                         </div>
                     </div>
                     <div class="project-details">
-                        <h3>Microservices Architecture API</h3>
+                        <h3>Task Management System (RBAC)</h3>
                         <p>
-                            A scalable microservices-based system with multiple independent services communicating via
-                            message queues. Includes API Gateway, service discovery, distributed caching, and centralized
-                            logging. Deployed on Azure with Docker containers.
+                            MERN Stack application featuring Admin, Manager, and User roles.
+                            Uses Role-Based Access Control (RBAC) to enforce permissions and secure route access.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">ASP.NET Core</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">RabbitMQ</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Azure</span>
-                            <span class="tech-tag">Ocelot Gateway</span>
+                            <span class="tech-tag">MERN Stack</span>
+                            <span class="tech-tag">RBAC</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Middleware Auth</span>
                         </div>
                         <div class="project-features">
                             <h4>Key Features:</h4>
                             <ul>
-                                <li><i class="fas fa-check-circle"></i> Event-driven architecture</li>
-                                <li><i class="fas fa-check-circle"></i> Service isolation and independence</li>
-                                <li><i class="fas fa-check-circle"></i> Distributed tracing</li>
-                                <li><i class="fas fa-check-circle"></i> Auto-scaling capabilities</li>
+                                <li><i class="fas fa-check-circle"></i> Multi-role dashboards</li>
+                                <li><i class="fas fa-check-circle"></i> Task filtering & search</li>
+                                <li><i class="fas fa-check-circle"></i> Protected API routes</li>
+                                <li><i class="fas fa-check-circle"></i> Advanced state management</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card-full" data-category="blazor full-stack" data-aos="fade-up">
+                <!-- Electronic Notice Board -->
+                <div class="project-card-full" data-category="mobile net" data-aos="fade-up">
                     <div class="project-image-full">
-                        <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=CRM+System" alt="CRM System">
+                        <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=Mobile+Notice+Board"
+                            alt="Electronic Notice Board">
                         <div class="project-overlay-full">
                             <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="#" class="project-link"><i class="fas fa-mobile"></i> Mobile App</a>
                             </div>
                         </div>
                     </div>
                     <div class="project-details">
-                        <h3>Enterprise CRM System</h3>
+                        <h3>Wireless Electronic Notice Board</h3>
                         <p>
-                            A full-featured Customer Relationship Management system built with Blazor Server.
-                            Includes customer management, sales pipeline tracking, analytics dashboard with charts,
-                            email integration, and task management with real-time notifications.
+                            Android application (Kotlin) integrated with ASP.NET backend and hardware.
+                            Features time-based notice display and role-based access for broadcasting notices.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Blazor Server</span>
-                            <span class="tech-tag">Entity Framework Core</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">SignalR</span>
-                            <span class="tech-tag">Chart.js</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Real-time updates with SignalR</li>
-                                <li><i class="fas fa-check-circle"></i> Interactive dashboards</li>
-                                <li><i class="fas fa-check-circle"></i> Role-based access control</li>
-                                <li><i class="fas fa-check-circle"></i> Export to Excel/PDF</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card-full" data-category="web-api" data-aos="fade-up">
-                    <div class="project-image-full">
-                        <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=Real-Time+Chat" alt="Real-Time Chat">
-                        <div class="project-overlay-full">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Real-Time Chat Application</h3>
-                        <p>
-                            A real-time messaging platform with private and group chat functionality. Built with
-                            ASP.NET Core Web API and SignalR for instant message delivery. Features include file
-                            sharing, emoji support, online status indicators, and message history.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ASP.NET Core</span>
-                            <span class="tech-tag">SignalR</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Redis</span>
-                            <span class="tech-tag">Vue.js</span>
-                        </div>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i> Instant message delivery</li>
-                                <li><i class="fas fa-check-circle"></i> File and image sharing</li>
-                                <li><i class="fas fa-check-circle"></i> Typing indicators</li>
-                                <li><i class="fas fa-check-circle"></i> Message encryption</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card-full" data-category="full-stack" data-aos="fade-up">
-                    <div class="project-image-full">
-                        <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=Task+Management" alt="Task Management">
-                        <div class="project-overlay-full">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Project Management Tool</h3>
-                        <p>
-                            A comprehensive project management application inspired by tools like Jira and Trello.
-                            Features include kanban boards, sprint planning, time tracking, team collaboration,
-                            and detailed reporting with customizable dashboards.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">ASP.NET Core MVC</span>
+                            <span class="tech-tag">Kotlin</span>
+                            <span class="tech-tag">ASP.NET</span>
                             <span class="tech-tag">SQL Server</span>
-                            <span class="tech-tag">jQuery</span>
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">Azure App Service</span>
+                            <span class="tech-tag">Arduino/GSM</span>
                         </div>
                         <div class="project-features">
                             <h4>Key Features:</h4>
                             <ul>
-                                <li><i class="fas fa-check-circle"></i> Drag-and-drop task boards</li>
-                                <li><i class="fas fa-check-circle"></i> Time tracking and reporting</li>
-                                <li><i class="fas fa-check-circle"></i> Team collaboration tools</li>
-                                <li><i class="fas fa-check-circle"></i> Email notifications</li>
+                                <li><i class="fas fa-check-circle"></i> Wireless broadcasting</li>
+                                <li><i class="fas fa-check-circle"></i> Real-time synchronization</li>
+                                <li><i class="fas fa-check-circle"></i> Multi-media notice support</li>
+                                <li><i class="fas fa-check-circle"></i> Role-based scheduling</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-card-full" data-category="web-api" data-aos="fade-up">
+                <!-- Face Detection System -->
+                <div class="project-card-full" data-category="desktop" data-aos="fade-up">
                     <div class="project-image-full">
-                        <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=Weather+API" alt="Weather API">
-                        <div class="project-overlay-full">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> API Docs</a>
-                                <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
-                        </div>
+                        <img src="https://via.placeholder.com/600x400/512BD4/FFFFFF?text=Face+Detection"
+                            alt="Face Detection">
                     </div>
                     <div class="project-details">
-                        <h3>Weather Data Aggregation API</h3>
+                        <h3>Face Detection System (AI)</h3>
                         <p>
-                            A robust RESTful API that aggregates weather data from multiple sources, providing
-                            consistent and reliable weather information. Includes caching for performance,
-                            rate limiting, and comprehensive API documentation with Swagger.
+                            Real-time detection system built in Python using OpenCV.
+                            Capable of detecting and counting multiple faces accurately in live video streams.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">ASP.NET Core Web API</span>
-                            <span class="tech-tag">Redis Caching</span>
-                            <span class="tech-tag">Swagger</span>
-                            <span class="tech-tag">Azure Functions</span>
-                            <span class="tech-tag">Minimal APIs</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">Deep Learning</span>
+                            <span class="tech-tag">Haar Cascades</span>
                         </div>
                         <div class="project-features">
                             <h4>Key Features:</h4>
                             <ul>
-                                <li><i class="fas fa-check-circle"></i> Multi-source data aggregation</li>
-                                <li><i class="fas fa-check-circle"></i> Response caching strategy</li>
-                                <li><i class="fas fa-check-circle"></i> Rate limiting and throttling</li>
-                                <li><i class="fas fa-check-circle"></i> Interactive API documentation</li>
+                                <li><i class="fas fa-check-circle"></i> Live face detection</li>
+                                <li><i class="fas fa-check-circle"></i> Multiple face counting</li>
+                                <li><i class="fas fa-check-circle"></i> Real-time processing</li>
+                                <li><i class="fas fa-check-circle"></i> High accuracy models</li>
                             </ul>
                         </div>
                     </div>
@@ -298,7 +290,8 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>About</h3>
-                    <p>Professional .NET developer creating innovative solutions with cutting-edge technologies.</p>
+                    <p>Professional Full Stack Developer creating innovative web and mobile solutions with modern
+                        technologies.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
@@ -321,11 +314,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 .NET Developer Portfolio. All rights reserved.</p>
+                <p>&copy; 2025 Muhammad Asad Khan | Full Stack Developer. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="../JavaScript/script.js"></script>
 </body>
+
 </html>
